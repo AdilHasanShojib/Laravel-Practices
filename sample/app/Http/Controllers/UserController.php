@@ -12,4 +12,42 @@ class UserController extends Controller
      $users= DB::select('select * from users');
      return view('users',['xyz'=>$users]);
     }
+
+
+    function queries(){
+
+        //All Data
+
+        //$res=DB::table('users')->where('name','sunny')->get();
+        //return view('users',['xyz'=>$res]);
+        
+
+        //Data Inserted
+
+       /* $res=DB::table('users')->insert([
+            'name'=>'Nayem',
+            'area'=>'savar',
+            'email'=>'nayem@gmail.com'
+        ]); */
+
+        
+        //Data Updated
+
+        //$res=DB::table('users')->where('name','Nayem')->update(['area'=>'Savar']);
+
+        // Data Deleted
+        $res=DB::table('users')->where('name','Nayem')->delete();
+
+
+        if($res){
+            return "data Updated";
+        }
+        else{
+            return "data Not Updated";
+        }
+    }
+
+
+
+
 }
