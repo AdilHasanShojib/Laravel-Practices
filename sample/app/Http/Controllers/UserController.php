@@ -48,6 +48,37 @@ class UserController extends Controller
     }
 
 
+    function get(){
+
+       return "Get Route Method";
+
+
+    }
+
+     function post(){
+
+       return "Post Route Method";
+
+
+    }
+
+
+     function put(){
+
+       return "Put Route Method";
+
+
+    }
+
+    function delete(){
+
+       return "Delete Route Method";
+
+
+    }
+
+
+
 
 
 }
