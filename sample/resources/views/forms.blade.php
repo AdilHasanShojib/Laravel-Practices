@@ -1,7 +1,7 @@
  <div>
  <h1> User Form </h1>
   
- <form action="/routeMethods" method="post">
+ <form action="/login" method="post">
     {{-- <input type="hidden" name="_method" value="PUT">
     <input type="hidden" name="_method" value="DELETE"> --}}
 

@@ -30,3 +30,6 @@ Route::view('route','forms');
 //Route::any('routeMethods',[UserController::class,'any']);  // working same as get,post,put,delete
 //Route::match(['post','get'],'routeMethods',[UserController::class,'group1']); // match 2 function
 //Route::match(['put','delete'],'routeMethods',[UserController::class,'group2']); // match 2 function
+
+
+Route::post('login',[UserController::class,'login']);

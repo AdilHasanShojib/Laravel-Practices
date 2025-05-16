@@ -76,6 +76,23 @@ class UserController extends Controller
 
 
     }
+   
+   // HTTP REQ CLASS
+
+    function login(Request $req){
+
+        echo $req->method();
+        echo "<br>";
+        echo "Request Method Path is " .$req->path();
+        echo "<br>";
+        echo "Request Method URL is " .$req->url();
+
+         echo "<br>";
+        echo "Name is " .$req->input('user');
+
+         echo "<br>";
+        echo "Request IP is " .$req->ip();
+    }
 
 
 
