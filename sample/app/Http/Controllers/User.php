@@ -29,6 +29,12 @@ class User extends Controller
     }
 
 
+   
+function addUser(){
+    session()->flash('msg', 'User Added Successfully!');
+    return redirect('add');
+}
+
 
 
 }

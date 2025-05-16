@@ -36,8 +36,15 @@ Route::view('route','forms');
 //Route::post('login',[UserController::class,'login']);
 
 //session in laravel
-Route::view('login','login');
-Route::view('profile','profile');
-Route::post('login',[User::class,'login']);
-Route::get('logout',[User::class,'logout']);
+
+// Route::view('login','login');
+// Route::view('profile','profile');
+// Route::post('login',[User::class,'login']);
+// Route::get('logout',[User::class,'logout']);
+
+//Flash Session in laravel
+
+Route::view('add','add');
+Route::post('add',[User::class,'addUser']);
+
 
