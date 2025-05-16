@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\User;
 
 
 
@@ -32,4 +33,11 @@ Route::view('route','forms');
 //Route::match(['put','delete'],'routeMethods',[UserController::class,'group2']); // match 2 function
 
 
-Route::post('login',[UserController::class,'login']);
+//Route::post('login',[UserController::class,'login']);
+
+//session in laravel
+Route::view('login','login');
+Route::view('profile','profile');
+Route::post('login',[User::class,'login']);
+Route::get('logout',[User::class,'logout']);
+
