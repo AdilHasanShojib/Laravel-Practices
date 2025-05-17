@@ -54,6 +54,9 @@ Route::view('route','forms');
 Route::view('addStudent','crudStudent');
 Route::post('addStudent',[CRUDstudent::class,'add']);
 
+Route::view('getStudent','studentList');
+Route::get('slist',[CRUDstudent::class,'list']);
+
 
 
 

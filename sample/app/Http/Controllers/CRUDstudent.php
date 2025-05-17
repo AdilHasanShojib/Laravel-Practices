@@ -22,4 +22,10 @@ class CRUDstudent extends Controller
 
 
     }
+
+    function list(){
+        $student=Student::all();
+
+        return view('studentList',['user'=>$student]);
+    }
 }
