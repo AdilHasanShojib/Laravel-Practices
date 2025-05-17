@@ -51,6 +51,29 @@ class CRUDstudent extends Controller
 
    }
 
+   function editStudent(Request $req, $id){
+
+       $student=Student::find($id);
+
+        $student->name=$req->name;
+        $student->department=$req->department;
+        $student->email=$req->email;
+        $student->area=$req->area;
+        
+
+        if($student->save()){
+            return redirect('slist');
+        }else{
+            return "Update Operations Failed!";
+        }
+
+
+    
+        
+
+
+   }
+
 
 
 

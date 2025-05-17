@@ -2,10 +2,12 @@
 
     <h1>Edit Student </h1>
   
- <form action="/addStudent" method="post">
+ <form action="/edit-student/{{$user->id}}" method="post">
     
 
     @csrf
+    <input type="hidden" name="_method" value="put">
+
     <input type="text" name="name" value="{{$user->name}}" placeholder="Enter name"> <br> <br>
     <input type="text" name="department" value="{{$user->department}}" placeholder="Enter department"> <br> <br>
     <input type="text" name="email" value="{{$user->email}}" placeholder="Enter email"> <br> <br>
