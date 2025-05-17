@@ -16,7 +16,7 @@ class CRUDstudent extends Controller
         $student->area=$req->area;
         $student->save();
         if($student){
-            return redirect('slist');
+            return redirect('studentList');
         }
         else echo "Something Wrong!";
 
@@ -36,7 +36,7 @@ class CRUDstudent extends Controller
 
      if($isDeleted){
 
-        return redirect('slist');
+        return redirect('studentList');
      }
 
 
@@ -62,7 +62,7 @@ class CRUDstudent extends Controller
         
 
         if($student->save()){
-            return redirect('slist');
+            return redirect('studentList');
         }else{
             return "Update Operations Failed!";
         }
@@ -70,6 +70,14 @@ class CRUDstudent extends Controller
 
     
         
+
+
+   }
+
+   function search(Request $req){
+    $student=Student::where('name','like',"%$req->search%")->get();
+
+    return view('studentList',['user'=>$student,'search'=>$req->search]);
 
 
    }

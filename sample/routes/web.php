@@ -55,12 +55,19 @@ Route::view('addStudent','crudStudent');
 Route::post('addStudent',[CRUDstudent::class,'add']);
 
 Route::view('getStudent','studentList');
-Route::get('slist',[CRUDstudent::class,'list']);
+Route::get('studentList',[CRUDstudent::class,'list']);
 
 Route::get('delete/{id}',[CRUDstudent::class,'delete']);
 
 Route::get('edit/{id}',[CRUDstudent::class,'edit']);
 Route::put('edit-student/{id}',[CRUDstudent::class,'editStudent']);
+
+
+// search data
+
+Route::get('search',[CRUDstudent::class,'search']);
+
+
 
 
 
