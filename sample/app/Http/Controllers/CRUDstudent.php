@@ -28,15 +28,25 @@ class CRUDstudent extends Controller
 
         return view('studentList',['user'=>$student]);
     }
+
+
    
-    function delete($id)
-   {
+    function delete($id){
      $isDeleted= Student::destroy($id);
 
      if($isDeleted){
 
         return redirect('slist');
      }
+
+
+   }
+
+   function edit($id){
+
+    $edit=Student::find($id);
+
+    return view('studentEdit',['user'=>$edit]);
 
 
    }

@@ -59,6 +59,8 @@ Route::get('slist',[CRUDstudent::class,'list']);
 
 Route::get('delete/{id}',[CRUDstudent::class,'delete']);
 
+Route::get('edit/{id}',[CRUDstudent::class,'edit']);
+
 
 
 

@@ -26,6 +26,7 @@
 <td>{{$data->email}}</td>
 <td>{{$data->area}}</td>
 <td><a href="{{'delete/'.$data->id}}">Delete</a></td>
+<td><a href="{{'edit/'.$data->id}}">Edit</a></td>
 
 </tr>
 
