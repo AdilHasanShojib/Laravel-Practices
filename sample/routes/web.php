@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\User;
 use App\Http\Controllers\CRUDstudent;
+use App\Http\Controllers\Upload;
 
 
 
@@ -70,6 +71,15 @@ Route::get('search',[CRUDstudent::class,'search']);
 // delete Multiple data
 
 Route::post('delete-multi',[CRUDstudent::class,'deleteMultiple']);
+
+//Upload images with Database
+
+Route::view('upload','upload');
+Route::post('upload',[Upload::class,'upload']);
+
+Route::get('imgList',[Upload::class,'imgList']);
+
+
 
 
 
