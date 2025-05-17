@@ -24,7 +24,9 @@ class CRUDstudent extends Controller
     }
 
     function list(){
-        $student=Student::all();
+        //$student=Student::all();
+
+        $student=Student::paginate(5);  // pagination
 
         return view('studentList',['user'=>$student]);
     }
