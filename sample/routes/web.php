@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\User;
+use App\Http\Controllers\CRUDstudent;
 
 
 
@@ -44,7 +45,15 @@ Route::view('route','forms');
 
 //Flash Session in laravel
 
-Route::view('add','add');
-Route::post('add',[User::class,'addUser']);
+// Route::view('add','add');
+// Route::post('add',[User::class,'addUser']);
+
+
+//CRUD operations with html form
+
+Route::view('addStudent','crudStudent');
+Route::post('addStudent',[CRUDstudent::class,'add']);
+
+
 
 
