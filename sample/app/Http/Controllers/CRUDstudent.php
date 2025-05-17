@@ -85,6 +85,24 @@ class CRUDstudent extends Controller
    }
 
 
+   function deleteMultiple(Request $req){
+
+    $isDeleted= Student::destroy($req->ids);
+
+    if($isDeleted){
+
+        return redirect('studentList');
+     }
+
+     else return "Something Wrong!";
+
+
+
+
+
+
+   }
+
 
 
 

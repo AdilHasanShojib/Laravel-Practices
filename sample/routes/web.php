@@ -67,6 +67,11 @@ Route::put('edit-student/{id}',[CRUDstudent::class,'editStudent']);
 
 Route::get('search',[CRUDstudent::class,'search']);
 
+// delete Multiple data
+
+Route::post('delete-multi',[CRUDstudent::class,'deleteMultiple']);
+
+
 
 
 
