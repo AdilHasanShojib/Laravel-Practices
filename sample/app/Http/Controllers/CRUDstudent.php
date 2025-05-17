@@ -16,7 +16,7 @@ class CRUDstudent extends Controller
         $student->area=$req->area;
         $student->save();
         if($student){
-            echo "New Student Added";
+            return redirect('slist');
         }
         else echo "Something Wrong!";
 
@@ -28,4 +28,21 @@ class CRUDstudent extends Controller
 
         return view('studentList',['user'=>$student]);
     }
+   
+    function delete($id)
+   {
+     $isDeleted= Student::destroy($id);
+
+     if($isDeleted){
+
+        return redirect('slist');
+     }
+
+
+   }
+
+
+
+
+
 }

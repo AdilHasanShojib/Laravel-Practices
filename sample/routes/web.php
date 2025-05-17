@@ -57,6 +57,8 @@ Route::post('addStudent',[CRUDstudent::class,'add']);
 Route::view('getStudent','studentList');
 Route::get('slist',[CRUDstudent::class,'list']);
 
+Route::get('delete/{id}',[CRUDstudent::class,'delete']);
+
 
 
 

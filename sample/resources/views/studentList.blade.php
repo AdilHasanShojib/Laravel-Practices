@@ -9,6 +9,8 @@
 <td>Department</td>
 <td>Email</td>
 <td>Area</td>
+<td>Operations</td>
+
 
 
 
@@ -23,6 +25,7 @@
 <td>{{$data->department}}</td>
 <td>{{$data->email}}</td>
 <td>{{$data->area}}</td>
+<td><a href="{{'delete/'.$data->id}}">Delete</a></td>
 
 </tr>
 

@@ -2,7 +2,7 @@
 
     <h1>Add New Student </h1>
   
- <form action="" method="post">
+ <form action="/addStudent" method="post">
     
 
     @csrf
