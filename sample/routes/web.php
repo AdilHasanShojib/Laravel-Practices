@@ -79,6 +79,10 @@ Route::post('upload',[Upload::class,'upload']);
 
 Route::get('imgList',[Upload::class,'imgList']);
 
+//Layouts Using Template Inheritance
+
+Route::view('lLogin','layoutLogin');
+
 
 
 
