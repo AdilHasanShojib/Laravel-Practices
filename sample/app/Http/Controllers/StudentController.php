@@ -42,12 +42,25 @@ class StudentController extends Controller
         else{
             return "Data Not Updated";
         }
+       }
+    
+       //Mutators(Modify data when inserting in DB)
 
-        
+       function mutators(){
+
+        $student= new Student();
+        $student->name='rahi Talukder';
+        $student->department='BBA';
+        $student->email='rahi@gmail.com';
+        $student->area='Savar';
+        if($student->save()){
+            return "New Student Added";
+        }else return "Something Wrongs!";
 
 
 
-        
-        
-    }
+       }
+
+
+
 }

@@ -83,6 +83,9 @@ Route::get('imgList',[Upload::class,'imgList']);
 
 Route::view('lLogin','layoutLogin');
 
+////Mutators(Modify data when inserting in DB)
+
+Route::get('mutators',[StudentController::class,'mutators']);
 
 
 
