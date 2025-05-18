@@ -9,4 +9,24 @@ class Student extends Model
 {
     use HasFactory;
     public $timestamps=false;
+
+
+    function getNameAttribute($val){
+
+        return ucfirst($val);
+
+
+    }
+
+    function getAreaAttribute($val){
+
+        return "BD-".$val;
+
+
+    }
+
+
+
+
+
 }
