@@ -10,7 +10,7 @@ class SellerController extends Controller
 {
     function list(){
 
-        $products= Seller::find(3)->productData;
+        $products= Seller::find(1)->productData;
 
         return $products;
 
