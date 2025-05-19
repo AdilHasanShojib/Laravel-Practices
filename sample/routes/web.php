@@ -6,6 +6,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\User;
 use App\Http\Controllers\CRUDstudent;
 use App\Http\Controllers\Upload;
+use App\Http\Controllers\SellerController;
 
 
 
@@ -83,9 +84,16 @@ Route::get('imgList',[Upload::class,'imgList']);
 
 Route::view('lLogin','layoutLogin');
 
-////Mutators(Modify data when inserting in DB)
+//Mutators(Modify data when inserting in DB)
 
 Route::get('mutators',[StudentController::class,'mutators']);
+
+         //Database Relationships
+
+// One to one Relationships
+
+Route::get('productList',[SellerController::class,'list']);
+
 
 
 
