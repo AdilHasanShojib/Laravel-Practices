@@ -7,6 +7,7 @@ use App\Http\Controllers\User;
 use App\Http\Controllers\CRUDstudent;
 use App\Http\Controllers\Upload;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\MailController;
 
 
 
@@ -93,6 +94,15 @@ Route::get('mutators',[StudentController::class,'mutators']);
 Route::get('productList',[SellerController::class,'list']);   // One to one Relationships
 
 Route::get('manyList',[SellerController::class,'manyToOne']);  // many to one Relationships
+
+
+
+// Email send
+
+
+Route::view('mailform','send-email');
+
+Route::post('send-mail',[MailController::class,'sendEmail']);
 
 
 
