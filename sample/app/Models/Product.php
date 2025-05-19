@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    function sellerData(){
+        
+         return $this->belongsTo('App\Models\Seller'); // many to one 
+    }
 }

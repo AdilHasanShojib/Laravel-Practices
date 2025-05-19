@@ -16,4 +16,13 @@ class SellerController extends Controller
 
 
     }
+
+     function manyToOne(){
+
+        $products= Product::with('sellerData')->get();
+
+        return $products;
+
+
+    }
 }

@@ -88,11 +88,13 @@ Route::view('lLogin','layoutLogin');
 
 Route::get('mutators',[StudentController::class,'mutators']);
 
-         //Database Relationships
+//Database Relationships
 
-// One to one Relationships
+Route::get('productList',[SellerController::class,'list']);   // One to one Relationships
 
-Route::get('productList',[SellerController::class,'list']);
+Route::get('manyList',[SellerController::class,'manyToOne']);  // many to one Relationships
+
+
 
 
 
