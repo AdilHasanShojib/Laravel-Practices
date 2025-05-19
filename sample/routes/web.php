@@ -8,8 +8,8 @@ use App\Http\Controllers\CRUDstudent;
 use App\Http\Controllers\Upload;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\MailController;
-
-
+use App\Http\Controllers\Device;
+use App\Http\Controllers\DeviceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,31 +25,31 @@ Route::get('students',[StudentController::class,'queries']);
 //Laravel Route Methods
 
 Route::view('route','forms');
-//Route::get('route',[UserController::class,'get']);
-//Route::post('routeMethods',[UserController::class,'post']);
-//Route::put('routeMethods',[UserController::class,'put']);
-//Route::delete('routeMethods',[UserController::class,'delete']);
+Route::get('route',[UserController::class,'get']);
+Route::post('routeMethods',[UserController::class,'post']);
+Route::put('routeMethods',[UserController::class,'put']);
+Route::delete('routeMethods',[UserController::class,'delete']);
 
 
 //Any & match Route
-//Route::any('routeMethods',[UserController::class,'any']);  // working same as get,post,put,delete
-//Route::match(['post','get'],'routeMethods',[UserController::class,'group1']); // match 2 function
-//Route::match(['put','delete'],'routeMethods',[UserController::class,'group2']); // match 2 function
+Route::any('routeMethods',[UserController::class,'any']);  // working same as get,post,put,delete
+Route::match(['post','get'],'routeMethods',[UserController::class,'group1']); // match 2 function
+Route::match(['put','delete'],'routeMethods',[UserController::class,'group2']); // match 2 function
 
 
-//Route::post('login',[UserController::class,'login']);
+Route::post('login',[UserController::class,'login']);
 
 //session in laravel
 
-// Route::view('login','login');
-// Route::view('profile','profile');
-// Route::post('login',[User::class,'login']);
-// Route::get('logout',[User::class,'logout']);
+Route::view('login','login');
+Route::view('profile','profile');
+Route::post('login',[User::class,'login']);
+Route::get('logout',[User::class,'logout']);
 
 //Flash Session in laravel
 
-// Route::view('add','add');
-// Route::post('add',[User::class,'addUser']);
+Route::view('add','add');
+Route::post('add',[User::class,'addUser']);
 
 
 //CRUD operations with html form
@@ -103,6 +103,11 @@ Route::get('manyList',[SellerController::class,'manyToOne']);  // many to one Re
 Route::view('mailform','send-email');
 
 Route::post('send-mail',[MailController::class,'sendEmail']);
+
+
+// Route Model Binding 
+
+Route::get('device/{key:name}',[DeviceController::class,'routeModelBinding']);
 
 
 
