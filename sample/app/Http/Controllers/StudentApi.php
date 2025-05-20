@@ -30,6 +30,25 @@ class StudentApi extends Controller
 
     }
 
+
+     function updateStudent(Request $req){
+
+        $student= Student::find($req->id);
+
+        $student->name=$req->name;
+        $student->department=$req->department;
+        $student->email=$req->email;
+        $student->area=$req->area;
+        
+        if($student->save()){
+
+            return ["result"=>"Student Updated SuccessFully"];
+        }else return ["result"=>"Something Wrong!"];
+
+
+
+    }
+
     
     
 }
