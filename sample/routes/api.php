@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentApi;
 use App\Http\Controllers\StudentResource;
+use App\Http\Controllers\UserAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,7 @@ Route::get('search-student/{name}',[StudentApi::class,'searchStudent']);
 
 //API with Resource Controller
 Route::resource('studentResource',StudentResource::class);
+
+//API Signup with Laravel sanctum
+Route::post('signUp',[UserAuthController::class,'signUp']);
+
