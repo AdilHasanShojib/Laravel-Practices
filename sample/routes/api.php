@@ -32,4 +32,4 @@ Route::get('search-student/{name}',[StudentApi::class,'searchStudent']);
 
 
 //API with Resource Controller
-Route::resource('studentResource',[StudentResource::class]);
+Route::resource('studentResource',StudentResource::class);
