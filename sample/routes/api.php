@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentApi;
+use App\Http\Controllers\StudentResource;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,7 @@ Route::delete('delete-student/{id}',[StudentApi::class,'deleteStudent']);
 
 // Search Student based on name
 Route::get('search-student/{name}',[StudentApi::class,'searchStudent']);
+
+
+//API with Resource Controller
+Route::resource('studentResource',[StudentResource::class]);
