@@ -49,6 +49,20 @@ class StudentApi extends Controller
 
     }
 
+     function deleteStudent($id){
+
+        $student=Student::destroy($id);
+
+        
+        if($student){
+
+            return ["result"=>"Student Delete SuccessFully"];
+        }else return ["result"=>"Something Wrong!"];
+
+
+
+    }
+
     
     
 }
