@@ -38,4 +38,5 @@ Route::resource('studentResource',StudentResource::class);
 
 //API Signup with Laravel sanctum
 Route::post('signUp',[UserAuthController::class,'signUp']);
+Route::post('login',[UserAuthController::class,'login']);
 
