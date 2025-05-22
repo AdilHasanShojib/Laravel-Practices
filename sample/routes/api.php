@@ -22,7 +22,21 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//API Method Performs
+
+
+//API Signup with Laravel sanctum
+Route::post('signUp',[UserAuthController::class,'signUp']);
+Route::post('login',[UserAuthController::class,'login']);
+
+
+
+
+
+
+//API Authentication with Laravel sanctum
+Route::group(['middleware'=>"auth:sanctum"],function(){
+
+    //API Method Performs
 
 Route::get('students',[StudentApi::class,'list']);
 Route::post('add-student',[StudentApi::class,'addStudent']);
@@ -36,7 +50,7 @@ Route::get('search-student/{name}',[StudentApi::class,'searchStudent']);
 //API with Resource Controller
 Route::resource('studentResource',StudentResource::class);
 
-//API Signup with Laravel sanctum
-Route::post('signUp',[UserAuthController::class,'signUp']);
-Route::post('login',[UserAuthController::class,'login']);
 
+});
+
+Route::get('login',[UserAuthController::class,'login'])->name('login');
